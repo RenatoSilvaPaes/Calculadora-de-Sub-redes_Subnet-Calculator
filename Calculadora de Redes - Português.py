@@ -30,7 +30,7 @@ def verificar_octetos(a):
   separar_octetos = '.'
   primeiro_octeto_digitado = segundo_octeto_digitado = terceiro_octeto_digitado = quarto_octeto_digitado = False
 
-  # SEPARA CARA OCTETO POR PONTOS, ADICIONANDO CADA DIGITO EM UMA LISTA
+  # SEPARA CADA OCTETO POR PONTOS, ADICIONANDO CADA DIGITO EM UMA LISTA
   for ip in a:
     if(ip == separar_octetos):
       ponto += 1
@@ -165,6 +165,7 @@ def converter_ip(b, c, d, e):
 
   return lista_octetos_validos_nao_validos, quantidade_octetos_so_numeros
 
+# VERIFICA QUAL OCTETO ESTÁ NA FAIXA IDEAL
 def verificar_faixa_ip(f, g, h, i):
   primeiro_octeto_na_faixa = segundo_octeto_na_faixa = terceiro_octeto_na_faixa = quarto_octeto_na_faixa = False
   limite_numero_maximo = 255
