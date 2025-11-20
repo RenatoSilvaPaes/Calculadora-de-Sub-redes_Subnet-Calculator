@@ -123,7 +123,7 @@ def verificar_octetos(a):
 
 # VERIFIES WHICH OCTETS HAS JUST NUMBERS
 def converter_ip(b, c, d, e):
-  primeiro_octeto_so_numeros = segundo_octeto_so_numeros = terceiro_octeto_so_numeros = quarto_octeto_so_numeros = False
+  primeiro_octeto_so_numeros = segundo_octeto_so_numeros = terceiro_octeto_so_numeros = quarto_octeto_so_numeros = None
   range_ord_min = 48
   range_ord_max = 57
   quantidade_octetos_so_numeros = 4
@@ -133,6 +133,7 @@ def converter_ip(b, c, d, e):
     if(ord(digito_primeiro_octeto) in range(range_ord_min, range_ord_max + 1)):
       primeiro_octeto_so_numeros = True
     else:
+      primeiro_octeto_so_numeros = False
       quantidade_octetos_so_numeros -= 1
       break
 
@@ -140,6 +141,7 @@ def converter_ip(b, c, d, e):
     if(ord(digito_segundo_octeto) in range(range_ord_min, range_ord_max + 1)):
       segundo_octeto_so_numeros = True
     else:
+      segundo_octeto_so_numeros = False
       quantidade_octetos_so_numeros -= 1
       break
 
@@ -147,6 +149,7 @@ def converter_ip(b, c, d, e):
     if(ord(digito_terceiro_octeto) in range(range_ord_min, range_ord_max + 1)):
       terceiro_octeto_so_numeros = True
     else:
+      terceiro_octeto_so_numeros = False
       quantidade_octetos_so_numeros -= 1
       break
 
@@ -154,13 +157,14 @@ def converter_ip(b, c, d, e):
     if(ord(digito_quarto_octeto) in range(range_ord_min, range_ord_max + 1)):
       quarto_octeto_so_numeros = True
     else:
+      quarto_octeto_so_numeros = False
       quantidade_octetos_so_numeros -= 1
       break
 
   lista_octetos_validos_nao_validos = [primeiro_octeto_so_numeros, segundo_octeto_so_numeros, terceiro_octeto_so_numeros, quarto_octeto_so_numeros]
 
   return lista_octetos_validos_nao_validos, quantidade_octetos_so_numeros
-
+    
 # VERIFIES WHICH OCTET IS ON THE IDEAL RANGE
 def verificar_faixa_ip(f, g, h, i):
   primeiro_octeto_na_faixa = segundo_octeto_na_faixa = terceiro_octeto_na_faixa = quarto_octeto_na_faixa = False
