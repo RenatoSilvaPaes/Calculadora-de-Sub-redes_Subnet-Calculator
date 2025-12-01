@@ -78,7 +78,7 @@ def verificar_octetos(a):
       quantidade_octetos_digitados -= 1
       segundo_octeto_digitado = terceiro_octeto_digitado = True
     else:
-      # 1ST OCTET WWASN'T TYPED
+      # 1ST OCTET WASN'T TYPED
       segundo_octeto_digitado = terceiro_octeto_digitado = quarto_octeto_digitado = True
   elif(len(lista_segundo_octeto) == 0):
     quantidade_octetos_digitados -= 1
